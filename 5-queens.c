@@ -4,7 +4,7 @@
 // 1 - for attacked square
 // 2 - for square captured by Queen
 int N = 8;
-int rows = 8, columns = 8, max = 5;
+int rows = 8, columns = 8, max = 5; // max - queen count on the board
 int** cleanArray() {
     int **Board = (int **)calloc(rows, sizeof(int));
     for (int i = 0; i < columns; ++i){
@@ -128,7 +128,7 @@ bool solve(int **Board,  int currentRow, int currentColumn, int queenCount){
         } else {
             for (int i = 0; i < N; ++i) {
                 for (int j = 0; j < N; ++j) {
-                    Board[i][j] = tempBoard[i][j]; // backTracking
+                    Board[i][j] = tempBoard[i][j]; // backtracking
                 }
             }
             ++currentColumn;
