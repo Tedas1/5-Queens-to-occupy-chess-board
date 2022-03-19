@@ -38,19 +38,6 @@ void printSolution(int **Board) {
     puts("");
 }
 
-bool isSafe(int **Board, int yRow, int xCol) {
-    for (int i = 0; i < columns; ++i) {
-        if(Board[yRow][i] == 2) {
-            return false;
-        }
-    }
-    for (int i = 0; i < rows; ++i) {
-        if(Board[i][xCol] == 2) {
-            return false;
-        }
-    }
-    return true;
-}
 int** attackEmptyOnes(int **Board, int row, int column) {
     for (int i = 0; i < columns; ++i) {
         if(Board[row][i] != 2) {
